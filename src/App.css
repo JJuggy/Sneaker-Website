@@ -12,6 +12,10 @@
 width: 100%;
 
 }
+.btn{
+  background-color:hsl(26, 100%, 55%);
+  color:white;
+}
 .the-plus-sign{
   color:hsl(26, 100%, 55%);
 }

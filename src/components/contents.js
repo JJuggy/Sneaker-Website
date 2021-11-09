@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import Button from './Button'
 
 function Contents() {
 
@@ -16,7 +17,7 @@ function Contents() {
     return (
 
         <>
-            <section className="info-section  w-10/12 p-4 lg:p-0 lg:pt-24 ">  
+            <section className="info-section  w-full lg:w-10/12 p-4 lg:p-0 lg:pt-24 ">  
                         <h4 className="title text-sm lg:text-2xl tracking-wider">SNEAKER COMPANY.</h4>
                         <h2 className=' shoe-type py-5 font-bold text-3xl lg:text-5xl'>Fall Limited Edition <br/> Sneakers</h2>   
                         <p className="about-shoes leading-7 lg:text-2xl">
@@ -34,21 +35,26 @@ function Contents() {
                             </div>
                         </div>
 
-                        <div className="add-item-remove-item-section lg:w-4/5 flex justify-between">
-                           <div className="the-plus-sign" onClick={handleNumberOfShoesClick}> 
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 " fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                                </svg>
+                        <div className="add-item-remove-item-section lg:w-full flex flex-col lg:flex-row lg:items-center ">
+                            <div className="sign-container flex justify-between lg:w-2/4">
+                                <div className="the-plus-sign" onClick={handleNumberOfShoesClick}> 
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 " fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    {numberOfShoes}
+                                </div>
+                                <div className="the-minus-sign" onClick={handleRemoveClick}>
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 12H4" />
+                                    </svg>
+                                </div>
                             </div>
-                            <div>
-                                {numberOfShoes}
-                            </div>
-                            <div className="the-minus-sign" onClick={handleRemoveClick}>
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 12H4" />
-                                </svg>
-                            </div>
+                          
+                            <Button/>
                         </div>
+                        
              </section>
             
         </>

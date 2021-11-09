@@ -4,6 +4,7 @@ import { SliderData } from '../SliderData'
 import '../../App.css'
 import Contents from '../contents'
 
+
 function Home() {
    
     
@@ -21,6 +22,7 @@ function Home() {
                             </div>
                         </section>
                         <Contents/>
+                        
                 </div> 
             </div>
     </>
