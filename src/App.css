@@ -1,38 +1,57 @@
-.App {
-  text-align: center;
+.slider{
+  position:relative;
+  display:flex;
+}
+.section-container{
+  font-family: 'Kumbh Sans', sans-serif;
+}
+.discount{
+  color:hsl(26, 100%, 55%);
+}
+.image{
+width: 100%;
+
+}
+.the-plus-sign{
+  color:hsl(26, 100%, 55%);
+}
+.the-minus-sign{
+  color:hsl(26, 100%, 55%);
+}
+.title{
+  color:hsl(26, 100%, 55%);
+  font-weight: 700;
+}
+.shoe-type{
+  color: hsl(220, 13%, 13%);
+}
+.about-shoes{
+  color: hsl(220, 14%, 75%)
+}
+.previousSlide{
+  z-index: 1;
+  position:absolute;
+  font-size:2rem;
+  color:white;
+  top:50%;
+  left:5%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.NextSlide{
+  z-index: 1;
+  position:absolute;
+  font-size:2rem;
+  color:white;
+  top:50%;
+  right:5%;
+}
+.slide{
+  opacity:0;
+  transition: 1s ease-out;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.active{
+  opacity:1;
+  transition: 1s ease-in-out;
+  /* transform: scale(1.08); */
 }
